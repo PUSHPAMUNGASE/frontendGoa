@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Travel Explorer</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+}
+
+.nav-links li {
+  display: inline;
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav-logo {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+/* Hero Section */
+.hero {
+  background-image: url('images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+  padding: 100px 20px;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.hero button {
+  background-color: #ff6b6b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+/* Destinations Section */
+.destinations {
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.destinations-grid {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.destination-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 30%;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.destination-card:hover {
+  transform: scale(1.05);
+}
+
+.destination-card img {
+  width: 100%;
+  height: auto;
+}
+
+.destination-card h3 {
+  padding: 10px;
+  color: #333;
+}
+
+.destination-card p {
+  padding: 0 10px 10px;
+  color: #777;
+}
+
+/* Contact Section */
+.contact {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.contact form {
+  display: inline-block;
+  max-width: 500px;
+  width: 100%;
+}
+
+.contact input, .contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.contact button {
+  background-color: #333;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+</style>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-logo">Travel Explorer</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#destinations">Destinations</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="hero">
+    <h1>Explore the World with Us</h1>
+    <p>Find your next travel destination</p>
+    <button onclick="scrollToDestinations()">Explore Destinations</button>
+  </header>
+
+  <!-- Destinations Section -->
+  <section id="destinations" class="destinations">
+    <h2>Popular Destinations</h2>
+    <div class="destinations-grid">
+      <div class="destination-card">
+        <img src="images/destination1.jpg" alt="Paris">
+        <h3>Paris</h3>
+        <p>The City of Light awaits you.</p>
+      </div>
+      <div class="destination-card">
+        <img src="images/destination2.jpg" alt="Maldives">
+        <h3>Maldives</h3>
+        <p>Discover paradise islands.</p>
+      </div>
+      <div class="destination-card">
+        <img src="images/destination3.jpg" alt="Tokyo">
+        <h3>Tokyo</h3>
+        <p>Experience the blend of tradition and technology.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
