@@ -1,0 +1,106 @@
+/* Navbar Container */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  /* Navbar background color */
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Logo Styling */
+.logo {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Navigation Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+/* Icons Section */
+.nav-icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.5rem;
+}
+
+.icon {
+  cursor: pointer;
+  color: white;
+}
+
+/* User Icon Container */
+.user-icon-container {
+  position: relative;
+  /* Ensures dropdown appears below the icon */
+  cursor: pointer;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 40px;
+  /* Dropdown appears below the icon */
+  right: 0;
+  /* Align to the right */
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 150px;
+  border-radius: 5px;
+  z-index: 1000;
+  /* Ensures dropdown stays on top */
+}
+
+/* Dropdown Buttons */
+.dropdown-menu button {
+  background-color: transparent;
+  border: none;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #333;
+}
+
+.dropdown-menu button:hover {
+  background-color: #007bff;
+  color: white;
+  border-radius: 3px;
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .nav-icons {
+    gap: 10px;
+  }
+}

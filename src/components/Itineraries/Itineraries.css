@@ -1,0 +1,140 @@
+/* General Container Styles */
+/* General Container Styles */
+.itineraries-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    /* Ensures the container stretches to fit content */
+    background-image: url('./IMAGES/AdobeStock_848010954_Preview.jpeg');
+    /* Replace with your image path */
+    background-size: cover;
+    /* Ensures background covers the container */
+    background-position: center;
+    background-attachment: fixed;
+    /* Keeps the background fixed in place */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    /* Align content to the top */
+    align-items: center;
+    padding: 2rem;
+    /* Add padding for spacing */
+    box-sizing: border-box;
+    /* Ensure padding is included in width and height */
+    color: #fff;
+    /* Text color for readability */
+}
+
+/* Other styles remain the same */
+
+/* Title and Subtitle */
+.itineraries-title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    color: #fff;
+    /* Set font color to white */
+}
+
+.itineraries-subtitle {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    color: #fff;
+    /* Set font color to white */
+}
+
+/* Form Container */
+.itineraries-form-container {
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Semi-transparent background */
+    padding: 1rem 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 1000px;
+    /* Limit the width for consistent design */
+}
+
+/* Individual Dropdown */
+.itineraries-dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+    min-width: 200px;
+    /* Ensures the dropdowns have consistent size */
+}
+
+.itineraries-dropdown label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.itineraries-dropdown select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit Button */
+.itineraries-submit-btn {
+    background-color: #ff7f50;
+    color: white;
+    font-size: 1rem;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.itineraries-submit-btn:hover {
+    background-color: #e06939;
+}
+
+/* Cards Section */
+.itineraries-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1000px;
+    /* Limit the width for consistent alignment */
+    width: 100%;
+    /* Responsive width */
+    padding-bottom: 2rem;
+    /* Adds spacing at the bottom */
+}
+
+.itineraries-no-results {
+    font-size: 1.2rem;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Card Styles */
+.card {
+    background-color: rgba(255, 255, 255, 0.8);
+    /* Slightly transparent card background */
+    border-radius: 10px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    transition: transform 0.3s ease;
+}

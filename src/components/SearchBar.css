@@ -1,0 +1,121 @@
+/* Styles for the search container */
+.search-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Styles for tabs */
+.tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.tab {
+    margin: 0 10px;
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.tab.active {
+    background-color: #007bff;
+    color: white;
+}
+
+.search-bar {
+    margin-top: 20px;
+}
+
+.search-input {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.dates {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.checkin-date,
+.checkout-date {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 200px;
+}
+
+.search-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.search-button:hover {
+    background-color: #0056b3;
+}
+
+/* Slider container */
+.slider-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.slider-button {
+    position: relative;
+    width: 80%;
+    height: 50px;
+    background-color: #4caf50;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.slider-handle {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    left: 5px;
+    /* Initial position */
+}
+
+.slider-button:active .slider-handle {
+    transform: translateX(90%);
+    /* Move the slider handle */
+}
+
+/* Text below the slider */
+.slider-text {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.slider-button:hover {
+    background-color: #45a049;
+}
+
+.slider-button:active {
+    background-color: #388e3c;
+}

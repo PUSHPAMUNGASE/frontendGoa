@@ -1,0 +1,87 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .food-header {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .category-tabs {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .category-tabs button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .category-tabs button.active {
+    background-color: #4caf50;
+    color: white;
+  }
+  
+  .food-swiper {
+    margin-bottom: 30px;
+  }
+  
+  .food-card {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .food-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .food-card-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .food-card-body {
+    margin-top: 10px;
+  }
+  
+  .know-more-btn {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .food-detail {
+    margin-top: 50px;
+    text-align: center;
+    color: black;
+  }
+  
+  .food-detail-image {
+    width: 300px;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .food-info {
+    margin-top: 20px;
+  }
+  
+  .food-info h3 {
+    margin-bottom: 10px;
+  }
+  

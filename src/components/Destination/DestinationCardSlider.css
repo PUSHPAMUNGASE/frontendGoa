@@ -1,107 +1,83 @@
-/* General container for the slider */
-
-.container1{
-    margin: 20px;
-    margin-bottom: 40px;
+/* Container for the slider */
+.destination-card-slider {
+  position: relative;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
 }
-.card-slider {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly; /* Ensure equal spacing between cards */
-    gap: 15px;
-    padding: 20px;
-    box-sizing: border-box;
-  }
-  
-  /* Card styling */
-  .card {
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    border-radius: 12px;
-    overflow: hidden;
-    width: 280px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border: 2px solid #d4d4d4;
-  }
-  
-  /* Hover effect for the cards */
-  .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    border-color: #e91e63; /* Pink border on hover */
-  }
-  
-  /* Card image styling */
-  .card-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  /* Card content (name & description) */
-  .card-body {
-    padding: 15px;
-    background-color: #f9f9f9;
-  }
-  
-  .card-body h5 {
-    font-size: 1.2rem;
-    color: #e91e63; /* Pink color for card title */
-    margin-bottom: 10px;
-    font-weight: bold;
-  }
-  
-  .card-body p {
-    font-size: 0.95rem;
-    color: #4caf50; /* Green color for description text */
-    line-height: 1.4;
-  }
-  
-  /* Selected place detail section */
-  .place-detail {
-    margin-top: 20px;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-    border: 2px solid #d4d4d4;
-  }
-  
-  .place-detail h2 {
-    font-size: 1.6rem;
-    margin-bottom: 15px;
-    color: #e91e63; /* Pink color for the title */
-  }
-  
-  .place-detail p {
-    font-size: 1.1rem;
-    margin-bottom: 15px;
-    color: #4caf50; /* Green color for the description text */
-  }
-  
-  .detail-image {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 2px solid #e91e63; /* Pink border around the image */
-  }
-  
-  /* Swiper specific styling */
-  .mySwiper {
-    width: 100%;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 12px;
-  }
-  
-  /* Pagination controls */
-  .swiper-pagination-bullet {
-    background-color: #e91e63; /* Pink bullets */
-  }
-  
-  .swiper-pagination-bullet-active {
-    background-color: #4caf50; /* Green active bullet */
-  }
-  
+
+/* The flex container holding all the cards */
+.slider-container {
+  display: flex;
+  position: relative;
+}
+
+/* Navigation buttons */
+.slider-button {
+  position: absolute;
+  top: 50%;
+  background: transparent;
+  border: none;
+  color: #FFEB3B;
+  font-size: 24px;
+  cursor: pointer;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+/* Content (destination cards) */
+.slider-content {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+/* Card style */
+.destination-card {
+  background-color: #000;
+  color: #FFEB3B;
+  border: 2px solid #FFEB3B;
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 10px;
+  min-width: 300px;
+  margin-right: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+  transform: scale(1.05);
+}
+
+/* Image style inside the card */
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Title and description styling */
+.card-title {
+  margin-top: 10px;
+  font-size: 18px;
+}
+
+.card-description {
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+
+.destinationh1{
+  text-align: center;
+  margin: 20px;
+  font-size: 50px;
+}

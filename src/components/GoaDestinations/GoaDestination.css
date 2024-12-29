@@ -1,0 +1,263 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Carousel Styling */
+/* Carousel Container */
+#carouselExampleFadedest {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Inner Wrapper */
+.carousel-inner-dest {
+    height: 100%;
+}
+
+/* Individual Items */
+.carousel-item-dest {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.8s ease-in-out;
+}
+
+/* Ensures Images Fit */
+.carousel-item-dest img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Active State */
+.carousel-item-dest.active {
+    opacity: 1;
+}
+
+.carousel-item-dest:not(.active) {
+    opacity: 0;
+}
+
+/* Navigation Buttons */
+.carousel-control-prev-dest,
+.carousel-control-next-dest {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-control-prev-dest:hover,
+.carousel-control-next-dest:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Icons for Previous and Next */
+.carousel-control-prev-icon-dest,
+.carousel-control-next-icon-dest {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-size: contain;
+    filter: invert(1);
+}
+
+.carousel-control-prev-dest {
+    left: 10px;
+}
+
+.carousel-control-next-dest {
+    right: 10px;
+}
+
+/* Bottom Section */
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    flex-wrap: wrap;
+}
+
+.info-section {
+    flex: 1;
+    max-width: 48%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-right: 2%;
+    transition: transform 0.3s ease;
+}
+
+.info-section:hover {
+    transform: translateY(-5px);
+}
+
+.info-section h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.info-section p {
+    font-size: 1.1rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.info-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-section ul li {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.info-section ul li::before {
+    content: "✔️";
+    margin-right: 10px;
+}
+
+/* Map Section */
+.map-section {
+    flex: 1;
+    max-width: 48%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.map-section h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 250px;
+    border-radius: 8px;
+}
+
+/* More Information Section */
+.more-info-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.more-info-left {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    margin-right: 20px;
+}
+
+.more-info-left h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.more-info-left p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.more-info-right {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.more-info-right img {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Read More Button */
+.read-more-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.read-more-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .bottom-container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .info-section,
+    .map-section {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    #carouselExampleFade {
+        height: 300px;
+    }
+
+    .more-info-container {
+        flex-direction: column;
+    }
+
+    .more-info-left,
+    .more-info-right {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+}

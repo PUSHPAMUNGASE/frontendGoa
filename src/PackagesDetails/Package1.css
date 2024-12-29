@@ -1,0 +1,337 @@
+/* Container for the entire package */
+.package1-container {
+    width: 90%;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    padding: 20px 0;
+}
+
+/* Header Section */
+.package1-section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.package1-section-header h2 {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.package1-section-header hr {
+    width: 50px;
+    margin: 0 auto;
+    border: 2px solid #007bff;
+}
+
+/* Content Section (Image + Description) */
+.package1-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 20px;
+    align-items: stretch;
+    /* Ensure both items stretch to the same height */
+}
+
+/* Image Section */
+.package1-image {
+    flex: 1;
+    /* Make the image take 50% of the available space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.package1-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensure image covers the space without distorting */
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Description Section */
+/* Description Section */
+.package1-description {
+    flex: 1;
+    /* Make the description take 50% of the available space */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    min-height: 300px;
+    /* Ensure description section has a minimum height */
+}
+
+/* Heading in the Description Section */
+.package1-description h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: bold;
+    /* Make the heading bold */
+}
+
+/* Paragraphs in the Description Section */
+.package1-description p {
+    font-size: 1.3rem;
+    /* Increased font size */
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    flex-grow: 1;
+    /* Allow paragraphs to take available space */
+}
+
+.package1-description a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.package1-description a:hover {
+    color: #0056b3;
+}
+
+/* Section for Package Features (Package Includes and Group Tour Packages) */
+.package1-section {
+    display: flex;
+    justify-content: space-between;
+    /* Distribute space between the two sections */
+    align-items: flex-start;
+    /* Align the items to the top */
+    margin: 40px 0;
+    gap: 40px;
+    /* Space between both sections */
+}
+
+/* Package Includes Section */
+.package1-package-includes {
+    flex: 1;
+    /* Make this section take available space */
+}
+
+.package1-sub-header {
+    border-top: 2px solid #eee;
+    margin: 10px 0 20px;
+}
+
+.package1-badges {
+    display: flex;
+    flex-direction: column;
+    /* Stack the badges vertically */
+    gap: 15px;
+}
+
+.package1-badge {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Space between icon and text */
+    font-size: 1.2rem;
+    color: #555;
+}
+
+.package1-badge i {
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.package1-badge:hover {
+    color: #0056b3;
+}
+
+/* Group Tour Packages Section */
+.package1-group-tour-packages {
+    flex: 1;
+    /* Make this section take available space */
+    text-align: left;
+    /* Align text to the left for a balanced look */
+}
+
+/* Group Tour Packages Section - Text Styling */
+.package1-group-tour-packages h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.package1-group-tour-packages p {
+    font-size: 1.3rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.package1-group-tour-packages strong {
+    font-weight: bold;
+}
+
+/* Section for Inclusions and Exclusions */
+.package1-inclusions-exclusions {
+    display: flex;
+    justify-content: space-between;
+    /* Align the sections side by side */
+    align-items: flex-start;
+    /* Align the sections to the top */
+    margin: 40px 0;
+    gap: 40px;
+    /* Space between both sections */
+}
+
+/* Inclusions Section */
+.package1-inclusions {
+    flex: 1;
+    /* Make this section take available space */
+}
+
+.package1-sub-header {
+    border-top: 2px solid #eee;
+    margin: 10px 0 20px;
+}
+
+.package1-inclusions ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.package1-inclusions li {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Exclusions Section */
+.package1-exclusions {
+    flex: 1;
+    /* Make this section take available space */
+    text-align: left;
+    /* Align the text to the left */
+}
+
+.package1-exclusions ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.package1-exclusions li {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Itinerary Section */
+.package1-itinerary {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.package1-itinerary h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.package1-itinerary h3 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.package1-itinerary p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.package1-itinerary ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+.package1-itinerary ul li {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* Tab buttons */
+.package1-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.package1-tab {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    margin: 0 5px;
+}
+
+.package1-tab.active {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #0056b3;
+}
+
+/* Optional: styling for content blocks */
+.package1-itinerary,
+.package1-terms {
+    margin-top: 20px;
+}
+
+/* Price Box */
+.package1-price-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 30px;
+}
+
+.package1-price-box p {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.package1-price {
+    font-size: 2.5rem;
+    color: #e74c3c;
+    font-weight: bold;
+    margin: 20px 0;
+}
+
+.package1-button {
+    background-color: #28a745;
+    color: #fff;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+}
+
+.package1-button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
