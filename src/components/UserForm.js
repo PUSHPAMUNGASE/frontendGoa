@@ -1,5 +1,8 @@
+
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import "./UserForm.css";
+
 
 const UserForm = ({ type, setAction }) => {
   const [formData, setFormData] = useState({
@@ -8,40 +11,63 @@ const UserForm = ({ type, setAction }) => {
     password: "",
     confirmPassword: "",
   });
-
-  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted", formData);
+    setError("");
+    setLoading(true);
 
-    if (type === "signup") {
-      if (formData.password === formData.confirmPassword) {
-        localStorage.setItem("userName", formData.name);
-
-        alert("Sign-up successful! Please log in to continue.");
-        setAction("login");
-      } else {
-        alert("Passwords do not match. Please try again.");
-      }
-    } else if (type === "login") {
-      if (formData.email && formData.password) {
-        const storedName = localStorage.getItem("userName");
-
-        if (storedName) {
-          alert(`Welcome ${storedName}! Explore Goa.`);
-        } else {
-          alert("User not found. Please sign up first.");
+    try {
+      if (type === "signup") {
+        if (formData.password !== formData.confirmPassword) {
+          alert("Passwords do not match. Please try again.");
+          setLoading(false);
+          return;
         }
 
-        navigate(`/home?name=${formData.name}`);
-      } else {
-        alert("Please enter valid credentials.");
+        const userData = {
+          name: formData.name,
+          email: formData.email,
+          plainPassword: formData.password, // Ensure correct key
+          confirmPassword: formData.confirmPassword,
+        };
+
+        await axios.post("http://localhost:8081/auth/register", userData);
+        alert("Sign-up successful! Please log in to continue.");
+        setAction("login");
+      } else if (type === "login") {
+        const loginData = {
+          email: formData.email,
+          plainPassword: formData.password, // Backend expects "plainPassword"
+        };
+
+        const response = await axios.post("http://localhost:8081/auth/login", loginData);
+        console.log("Login Response:", response.data); // Debug log
+
+        if (response.status === 200) {
+          alert(response.data.message || "Login successful!"); 
+
+          if (response.data.user) {
+            localStorage.setItem("user", JSON.stringify(response.data.user));
+            window.location.href = "/dashboard"; // Redirect after login
+          }
+        }
       }
+    } catch (error) {
+      if (error.response) {
+        setError(error.response.data.message || "Invalid email or password.");
+      } else {
+        setError("Error during login. Please try again.");
+      }
+      console.error("Login error:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -85,10 +111,18 @@ const UserForm = ({ type, setAction }) => {
             required
           />
         )}
-        <button type="submit">{type === "signup" ? "Sign Up" : "Login"}</button>
+        <button type="submit" disabled={loading}>
+          {loading ? "Processing..." : type === "signup" ? "Sign Up" : "Login"}
+        </button>
       </form>
+      {error && <div className="error-message">{error}</div>}
     </div>
   );
 };
 
 export default UserForm;
+
+
+
+
+

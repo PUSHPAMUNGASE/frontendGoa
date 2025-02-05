@@ -1,5 +1,5 @@
-/* UserForm.css */
-.user-form {
+/* UserMenu.css */
+.user-menu {
     max-width: 400px;
     margin: 50px auto;
     padding: 30px;
@@ -10,39 +10,19 @@
     transition: all 0.3s ease-in-out;
   }
   
-  .user-form:hover {
+  .user-menu:hover {
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
   }
   
-  .user-form h2 {
+  .user-menu h2 {
     font-size: 24px;
     margin-bottom: 20px;
     color: #333;
     font-weight: bold;
   }
   
-  .user-form form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .user-form input {
+  .user-menu button {
     width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    font-size: 16px;
-    transition: 0.3s;
-  }
-  
-  .user-form input:focus {
-    outline: none;
-    border-color: #007bff;
-    box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
-  }
-  
-  .user-form button {
     background: #007bff;
     color: #fff;
     border: none;
@@ -51,36 +31,44 @@
     border-radius: 8px;
     cursor: pointer;
     transition: 0.3s;
+    margin-bottom: 10px;
   }
   
-  .user-form button:hover {
+  .user-menu button:hover {
     background: #0056b3;
+    transform: scale(1.05); /* Slightly enlarge on hover */
   }
   
-  .user-form button:disabled {
+  .user-menu button:disabled {
     background: #ccc;
     cursor: not-allowed;
   }
   
-  .error-message {
-    color: red;
-    font-size: 14px;
-    margin-top: 10px;
+  .user-menu button:last-child {
+    background: #6c757d;
+  }
+  
+  .user-menu button:last-child:hover {
+    background: #5a6268;
+  }
+  
+  .user-menu button:focus {
+    outline: 3px solid #0056b3; /* Focus outline for accessibility */
   }
   
   /* Responsive Design */
   @media (max-width: 480px) {
-    .user-form {
+    .user-menu {
       width: 90%;
       padding: 20px;
     }
   
-    .user-form input {
-      font-size: 14px;
-      padding: 10px;
+    .user-menu h2 {
+      font-size: 20px;
+      margin-bottom: 15px; /* Spacing adjustment for small screens */
     }
   
-    .user-form button {
+    .user-menu button {
       font-size: 16px;
       padding: 10px;
     }

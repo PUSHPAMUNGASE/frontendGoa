@@ -10,7 +10,7 @@ import ExperienceCardSlider from "./components/Experience/ExperienceCardSlider";
 import Review from "./components/Review/Review";
 import MenuContent from "./components/NavbarContent/MenuContent";
 import Menurouting from "./components/NavbarContent/Menurouting";
-
+import PackageFilter from "./components/Experience/PackageFilter";
 import SouthGoaPackage from "./PackagesDetails/SouthGoaPackage";
 import Honeymoon from "./PackagesDetails/Honeymoon";
 import Package1 from "./PackagesDetails/Package1";
@@ -31,6 +31,10 @@ import UserMenu from "./components/UserMenu";
 import HandleFeedback from "./components/HandleFeedback";
 import GoaDestination from "./components/GoaDestinations/GoaDestination";
 import BookNow from "./PackagesDetails/BookNow";
+import VehicleList from './components/RentalService/VehicleList';
+// import ExperienceCardSlider from "./components/ExperienceCardSlider";
+import ExperienceDetails from "./components/Experience/ExperienceDetails";
+import Helpdesk from "./components/FAQ/Helpdesk";
 
 const projectroute = createBrowserRouter([
   {
@@ -38,19 +42,40 @@ const projectroute = createBrowserRouter([
     element: <App />,
     children: [
       { index: true, element: <Home /> }, // Home page
+      //  {
+      //    path: "destination/:destinationId",
+      //    element: <DestinationDetailPage />,
+      //  },
+     // { path: "destination", element: <DestinationCardSlider /> },
+      // { path: "experiences", element: <ExperienceCardSlider /> },
       {
-        path: "destination/:destinationId",
-        element: <DestinationDetailPage />,
+        path: "exp/:id",
+        element: <ExperienceDetails />,
       },
-      { path: "destination", element: <DestinationCardSlider /> },
-      { path: "experiences", element: <ExperienceCardSlider /> },
-      { path: "reviews", element: <Review /> },
+      {
+        path: "/help", // This route will render the FoodMenu component
+        element: <Helpdesk />,
+      },
+     
+
+      { path:"exp", element:<ExperienceCardSlider />},
+        { path:"exp/:id",element:<ExperienceDetails />} ,
+      // {
+      //   path:"/rental",
+      //   element:<VehicleList/>
+      // },
+      
+
       { path: "menu", element: <MenuContent /> },
       { path: "packages", element: <Packages /> },
       { path: "/routing", element: <Menurouting /> },
       { path: "/login", element: <Login /> }, // Login page
       { path: "/register", element: <Register /> }, // Register page
       { path: "/home", element: <Home /> },
+      { path: "reviews", element: <Review /> },
+      {
+        path:"/packagefilter",element:<PackageFilter/>
+      },
       {
         path: "/user",
         element: <UserPage />,
@@ -115,6 +140,7 @@ const projectroute = createBrowserRouter([
         path: "/book-now",
         element: <BookNow />,
       },
+     
 
       // Admin Routes
       {

@@ -1,0 +1,30 @@
+.filter-container {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .filter-section {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
+  }
+  
+  .category-filters label {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .package-card {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .package-card:hover {
+    transform: translateY(-5px);
+  }
+  

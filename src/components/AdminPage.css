@@ -1,0 +1,12 @@
+/* AdminPage styles */
+.admin-page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full height of the viewport */
+    background-color: #f4f7fc; /* Optional: background color for the page */
+  }
+  
+  
+  

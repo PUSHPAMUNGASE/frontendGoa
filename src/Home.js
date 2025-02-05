@@ -11,6 +11,8 @@ import Att from "./components/Attractions/AttractionsInfo";
 import Hinterland from "./components/Hinterland/HinterlandInfo";
 import Itineraries from "./components/Itineraries/Itineraries";
 
+import Helpdesk from "./components/FAQ/Helpdesk";
+
 const Home = () => {
   const location = useLocation(); // Access the location object to read query params
   const [userName, setUserName] = useState("");
@@ -36,8 +38,11 @@ const Home = () => {
       <Hinterland />
       <Itineraries />
       <Packages />
+
       <ExperienceCardSlider />
+  
       <Review />
+      {/* <Helpdesk/> */}
       {/* Display a welcome message if the user's name is available */}
       {userName && <h1>Welcome, {userName}!</h1>}
 

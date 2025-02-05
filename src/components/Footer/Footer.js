@@ -1,5 +1,6 @@
 import React from "react";
 import "./Footer.css"; // Import the CSS file for styling
+import { useNavigate, Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -18,8 +19,11 @@ function Footer() {
           <h4>Quick Links</h4>
           <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/destinations">Destinations</a></li>
-            <li><a href="/experiences">Experiences</a></li>
+            <li><Link to="/destination/:destinationId">Destinations</Link></li>
+            <li>
+          {/* <a href="/experiences">Experiences</a> */}
+          <Link to="/exp">Experiences</Link>
+        </li>
             <li><a href="/about">About Us</a></li>
             <li><a href="/contact">Contact</a></li>
           </ul>

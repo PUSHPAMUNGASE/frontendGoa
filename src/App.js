@@ -18,11 +18,11 @@ function App() {
   return (
     <>
       <Navbar openModal={openModal} />
-      <ModalBox
+      {/* <ModalBox
         showModal={showModal}
         closeModal={closeModal}
         modalType={modalType}
-      />
+      /> */}
       <Outlet />
       <Footer />
     </>
