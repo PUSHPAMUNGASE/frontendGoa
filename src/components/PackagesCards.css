@@ -1,103 +1,91 @@
 .top-holiday-package {
     position: relative;
-    padding: 2rem;
+    padding: 3rem 2rem; /* Increased padding for better spacing */
     background-image: url("./GoaDestinations/GoaImage/packbg.jpg");
-    /* Replace with your image path */
     background-size: cover;
     background-position: center;
     color: white;
     text-align: center;
-    /* Center-align all text by default */
     overflow: hidden;
 }
 
 .top-holiday-package .top-head {
     display: flex;
     justify-content: center;
-    /* Horizontally centers the heading */
     align-items: center;
-    /* Vertically centers within the container (if height is set) */
-    margin-bottom: 1rem;
+    margin-bottom: 2rem; /* Increased bottom margin */
 }
 
 .top-holiday-package .top-head h1 {
     color: white;
-    /* Ensures the heading is white */
     text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-    /* Adds shadow for better visibility */
     font-size: 3rem;
-    /* Adjust size for prominence */
     margin: 0;
-    /* Removes default margins */
+    padding: 0.5rem 0; /* Added padding for better spacing */
+}
+
+.card{
+    margin: 30px;
 }
 
 .top-holiday-package p {
     color: white;
-    /* Ensures paragraph text is white */
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-    /* Adds shadow for better visibility */
-    margin-bottom: 2rem;
-    line-height: 1.5;
-    font-size: 1.2rem;
-    padding: 0 1rem;
+    margin-bottom: 3rem; /* Increased bottom margin for spacing */
+    line-height: 1.6;
+    font-size: 1.3rem;
+    padding: 0 2rem; /* Adjusted padding for readability */
 }
 
 .cards-container {
     display: flex;
     overflow-x: auto;
-    /* Enables horizontal scrolling */
     scroll-behavior: smooth;
-    /* Smooth scrolling effect */
-    gap: 1rem;
-    /* Spacing between cards */
+    gap: 1.5rem; /* Increased gap between cards */
     white-space: nowrap;
-    /* Keeps items in a single line */
-    padding: 1rem;
+    padding: 2rem 1rem; /* Adjusted padding for better alignment */
     scrollbar-width: none;
-    /* For Firefox */
+    margin: 20px;
 }
 
 .cards-container::-webkit-scrollbar {
     display: none;
-    /* Hides scrollbar */
 }
 
 .card {
+    margin:10px;
     flex: 0 0 auto;
-    /* Prevents cards from wrapping to the next line */
-    width: 300px;
-    /* Adjust card width */
+    width: 280px; /* Slightly wider cards */
     background: rgba(255, 255, 255, 0.9);
-    /* Slightly opaque white background */
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem;
     text-align: center;
-    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    transform: scale(1.07);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .card img {
-    width: 100%;
-    border-radius: 10px;
+    width: 90%;
+    border-radius: 12px;
     margin-bottom: 1rem;
     object-fit: cover;
-    height: 200px;
+    height: 220px;
+    margin:10px;
 }
 
 .card h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: #333;
     margin: 0.5rem 0;
 }
 
 .card p {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #555;
     margin: 0.5rem 0;
 }
@@ -106,11 +94,11 @@ button {
     background: #ff6347;
     color: white;
     border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 1rem;
-    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    margin-top: 0.7rem;
     transition: background 0.3s ease;
 }
 
@@ -121,15 +109,20 @@ button:hover {
 /* Responsive Design */
 @media (max-width: 768px) {
     .card {
-        width: 90%;
+        width: 85%;
         margin: 0 auto;
+        padding: 1.2rem;
+    }
+
+    .top-holiday-package {
+        padding: 2rem 1rem;
     }
 
     .top-holiday-package .top-head h1 {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .top-holiday-package p {
-        font-size: 1rem;
+        font-size: 1.1rem;
     }
 }

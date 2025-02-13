@@ -35,6 +35,11 @@ import VehicleList from './components/RentalService/VehicleList';
 // import ExperienceCardSlider from "./components/ExperienceCardSlider";
 import ExperienceDetails from "./components/Experience/ExperienceDetails";
 import Helpdesk from "./components/FAQ/Helpdesk";
+import FoodSection from "./components/Foodsection/FoodSection";
+import hotelImages from "./components/Foodsection/HotelImages";
+import HotelImages from "./components/Foodsection/HotelImages";
+import MonthFestivalDetails  from "./components/Festival/MonthFestivalDetails";
+import MonthFestival from "./components/Festival/MonthFestival";
 
 const projectroute = createBrowserRouter([
   {
@@ -56,7 +61,17 @@ const projectroute = createBrowserRouter([
         path: "/help", // This route will render the FoodMenu component
         element: <Helpdesk />,
       },
-     
+      {
+        path:"/foodsection",
+        element:<FoodSection/>
+      },
+      {
+        path:"/hotelImages",
+        element:<HotelImages/>
+      },
+      
+
+  
 
       { path:"exp", element:<ExperienceCardSlider />},
         { path:"exp/:id",element:<ExperienceDetails />} ,
@@ -65,7 +80,8 @@ const projectroute = createBrowserRouter([
       //   element:<VehicleList/>
       // },
       
-
+{path:"festival",element:<MonthFestival/>},
+{path:"festival/festival-details",element:<MonthFestivalDetails/>},
       { path: "menu", element: <MenuContent /> },
       { path: "packages", element: <Packages /> },
       { path: "/routing", element: <Menurouting /> },

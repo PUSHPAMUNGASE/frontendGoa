@@ -102,6 +102,9 @@
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
+h3{
+  color:white
+}
 .icon:hover {
   color: #facc15; /* Golden yellow on hover */
   transform: scale(1.2); /* Zoom effect */

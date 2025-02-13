@@ -17,6 +17,7 @@ function App() {
 
   return (
     <>
+   
       <Navbar openModal={openModal} />
       {/* <ModalBox
         showModal={showModal}

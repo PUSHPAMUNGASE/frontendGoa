@@ -10,8 +10,11 @@ import AttractionsSlider from "./components/Attractions/AttractionsSlider";
 import Att from "./components/Attractions/AttractionsInfo";
 import Hinterland from "./components/Hinterland/HinterlandInfo";
 import Itineraries from "./components/Itineraries/Itineraries";
-
+import Navbar from "./components/Navbar";
 import Helpdesk from "./components/FAQ/Helpdesk";
+import HotelImages from "./components/Foodsection/HotelImages";
+import MonthFestival from "./components/Festival/MonthFestival";
+
 
 const Home = () => {
   const location = useLocation(); // Access the location object to read query params
@@ -32,14 +35,17 @@ const Home = () => {
 
   return (
     <>
+   
       <Carousal />
       <SearchBar />
       <Att />
       <Hinterland />
       <Itineraries />
       <Packages />
+      {/* //<HotelImages/> */}
 
       <ExperienceCardSlider />
+      <MonthFestival/>
   
       <Review />
       {/* <Helpdesk/> */}

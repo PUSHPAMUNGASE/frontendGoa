@@ -1,0 +1,136 @@
+/* body {
+  background-image: url("https://c8.alamy.com/comp/M8XCDT/goa-viva-carnaval-sign-margao-goa-india-M8XCDT.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: pink;
+} */
+
+/* Center the header */
+.festival-header {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: #0c0909;
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  }
+  
+  /* Festival Cards Container */
+  .festival-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px; /* Adjusted spacing between cards */
+    padding: 20px;
+  }
+  
+  /* Individual Festival Card */
+  .festival-card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    overflow: hidden;
+    text-align: center;
+    width: 260px; /* Slightly reduced width */
+    height: 400px; /* Slightly reduced height */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.1);
+    padding: 8px; /* Adjusted padding */
+  }
+  
+  .festival-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 12px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Festival Image */
+  .festival-image {
+    width: 88%; /* Adjusted width for proper spacing */
+    height: 58%; /* Adjusted height */
+    object-fit: cover;
+    margin: auto; /* Center the image */
+    border-radius: 10px;
+  }
+  
+  /* Festival Info */
+  .festival-info {
+    padding: 10px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Festival Text */
+  .festival-type,
+  .festival-date,
+  .festival-description {
+    font-size: 13px;
+    color: #555;
+    margin: 4px 0;
+  }
+  
+  /* Festival Button */
+  .festival-btn {
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    padding: 8px;
+    width: 75%;
+    margin: 0 auto 12px auto;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .festival-btn:hover {
+    background-color: #e86446;
+  }
+  
+  /* Month Buttons Container */
+  .month-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  /* Month Buttons */
+  .month-btn {
+    padding: 10px 15px;
+    font-size: 15px;
+    border-radius: 6px;
+    background-color: #e04e2f;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  .month-btn.active {
+    background-color: #e76f54;
+  }
+  
+  .month-btn:hover {
+    background-color: #e04e2f;
+  }
+  /* Festival Name */
+  .festival-info h3 {
+    font-size: 20px;
+    color: black; /* Ensuring the festival name appears in black */
+    font-weight: bold;
+    margin: 5px 0;
+  }

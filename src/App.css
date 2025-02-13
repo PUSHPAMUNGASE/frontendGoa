@@ -1,7 +1,6 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
+
+/* Adjust the body or main content to prevent content from hiding behind the navbar */
 
 
 .App {
